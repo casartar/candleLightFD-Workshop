@@ -30,3 +30,6 @@ Anzahl   | Reference           | Part number        | LCSC     | Bemerkung
 - STLs: https://github.com/linux-automation/candleLight/blob/master/case/case_upper.stl
 - 2x Schraube M3x8 
 - 2x Mutter M3 
+
+## Links
+- TBD
