@@ -1,5 +1,9 @@
-## Kosten
-- 15 €
+## Original Projekt
+### Hardware
+[https://github.com/linux-automation/candleLightFD]()
+
+### Firmware
+[https://github.com/linux-automation/candleLight_fw/tree/topic/candleLightFD]()
 
 ## ibom
 [ibom_mainboard.html](https://html-preview.github.io/?url=https://github.com/linux-automation/candleLightFD/blob/main/release/candlelightfd-S01-R01/candlelightfd-S01-R01-V01/candlelightfd-S01-R01_BOM.html)
@@ -31,5 +35,56 @@ Anzahl   | Reference           | Part number        | LCSC     | Bemerkung
 - 2x Schraube M3x8 
 - 2x Mutter M3 
 
-## Links
-- TBD
+Weil ich kein Fan mehr von 3D-gedruckten Gehäusen bin, nutze ich wenn möglich nur noch transparenten Schrumpfschlauch.
+
+## Flashen
+
+### Prüfen ob Bootloader aktiv
+
+Ist der Controller leer, zeigt lsusb:
+
+```
+Bus 001 Device 026: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
+```
+
+Der Boot-Pin versetzt den Chip nicht zuverlässig in den Bootloader mode. Um in den Bootloader zu gelangen muss per SWD der Chip gelöscht werden.
+
+### Firmware bauen
+
+siehe [make flash-candleLightFD_fw]()
+
+### Firmware flashen
+
+im build Ordner:
+```
+make flash-candleLightFD_fw
+```
+### Reboot
+
+Stecker ziehen und wieder einstecken.
+
+### Prüfen ob Firmware aktiv
+
+lsusb sollte zeigen:
+
+```
+Bus 001 Device 015: ID 1d50:6018 OpenMoko, Inc. Black Magic Debug Probe (Application)
+```
+
+## Testen
+
+Siehe hier: [https://linux-automation.com/en/products/candlelight-fd.html]() im Kapitel "First Steps"
+
+```
+sudo ip link set dev can0 up type can bitrate 500000 dbitrate 2000000 fd on
+```
+
+### Sender
+```
+cansend can0 213\#\#111223344
+```
+
+### Empfänger
+```
+cansend can0 213\#\#111223344
+```
