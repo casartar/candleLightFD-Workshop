@@ -31,7 +31,7 @@ Anzahl   | Reference           | Part number        | LCSC     | Bemerkung
 1        | Y1                  | 830108313809       | C7294546 | alternative zu Würth
 
 ## Gehäuse
-- STLs: https://github.com/linux-automation/candleLight/blob/master/case/case_upper.stl
+- STLs: https://github.com/linux-automation/candleLight/tree/master/case
 - 2x Schraube M3x8 
 - 2x Mutter M3 
 
@@ -50,8 +50,7 @@ Bus 001 Device 026: ID 0483:df11 STMicroelectronics STM Device in DFU Mode
 Der Boot-Pin versetzt den Chip nicht zuverlässig in den Bootloader mode. Um in den Bootloader zu gelangen muss per SWD der Chip gelöscht werden.
 
 ### Firmware bauen
-
-siehe [make flash-candleLightFD_fw]()
+https://github.com/linux-automation/candleLight_fw/tree/topic/candleLightFD?tab=readme-ov-file#building
 
 ### Firmware flashen
 
@@ -68,12 +67,12 @@ Stecker ziehen und wieder einstecken.
 lsusb sollte zeigen:
 
 ```
-Bus 001 Device 015: ID 1d50:6018 OpenMoko, Inc. Black Magic Debug Probe (Application)
+Bus 001 Device 015: ID 1d50:606f OpenMoko, Inc. Geschwister Schneider CAN adapter
 ```
 
 ## Testen
 
-Siehe hier: [https://linux-automation.com/en/products/candlelight-fd.html]() im Kapitel "First Steps"
+Siehe hier: https://linux-automation.com/en/products/candlelight-fd.html im Kapitel "First Steps"
 
 ```
 sudo ip link set dev can0 up type can bitrate 500000 dbitrate 2000000 fd on
