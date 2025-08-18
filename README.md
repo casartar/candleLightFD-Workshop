@@ -1,9 +1,9 @@
 ## Original Projekt
 ### Hardware
-[https://github.com/linux-automation/candleLightFD]()
+https://github.com/linux-automation/candleLightFD
 
 ### Firmware
-[https://github.com/linux-automation/candleLight_fw/tree/topic/candleLightFD]()
+https://github.com/linux-automation/candleLight_fw/tree/topic/candleLightFD
 
 ## ibom
 [ibom_mainboard.html](https://html-preview.github.io/?url=https://github.com/linux-automation/candleLightFD/blob/main/release/candlelightfd-S01-R01/candlelightfd-S01-R01-V01/candlelightfd-S01-R01_BOM.html)
