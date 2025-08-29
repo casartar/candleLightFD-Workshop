@@ -85,5 +85,5 @@ cansend can0 213\#\#111223344
 
 ### Empfänger
 ```
-cansend can0 213\#\#111223344
+candump can0
 ```
